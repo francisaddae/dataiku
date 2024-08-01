@@ -3,9 +3,9 @@ USE SCHEMA francisDB.Public;
 
 
 --Brooklyn
-CREATE OR REPLACE DYNAMIC TABLE brooklyn_covid_data
-    LAG='DOWNSTREAM'
-    WAREHOUSE='CHALLENGE_WH'
+CREATE OR REPLACE  TABLE brooklyn_covid_data
+    -- LAG='DOWNSTREAM'
+    -- WAREHOUSE='CHALLENGE_WH'
 AS
 SELECT
     'Brooklyn' AS borough,
@@ -19,7 +19,7 @@ QUALIFY ROW_NUMBER() OVER(PARTITION BY date_of_interest ORDER BY date_of_interes
 
 
 --Bronx
-CREATE OR REPLACE DYNAMIC TABLE bronx_covid_data
+CREATE OR REPLACE  TABLE bronx_covid_data
     -- LAG='DOWNSTREAM'
     -- WAREHOUSE='CHALLENGE_WH'
 AS
@@ -35,9 +35,9 @@ QUALIFY ROW_NUMBER() OVER(PARTITION BY date_of_interest ORDER BY date_of_interes
 
 
 --Manhattan
-CREATE OR REPLACE DYNAMIC TABLE manhattan_covid_data
-    LAG='DOWNSTREAM'
-    WAREHOUSE='CHALLENGE_WH'
+CREATE OR REPLACE  TABLE manhattan_covid_data
+    -- LAG='DOWNSTREAM'
+    -- WAREHOUSE='CHALLENGE_WH'
 AS
 SELECT
     'Manhattan' AS borough,
@@ -51,9 +51,9 @@ QUALIFY ROW_NUMBER() OVER(PARTITION BY date_of_interest ORDER BY date_of_interes
 
 
 -- Queens
-CREATE OR REPLACE DYNAMIC TABLE queens_covid_data
-    LAG='DOWNSTREAM'
-    WAREHOUSE='CHALLENGE_WH'
+CREATE OR REPLACE  TABLE queens_covid_data
+    -- LAG='DOWNSTREAM'
+    -- WAREHOUSE='CHALLENGE_WH'
 AS
 SELECT
     'Queens' AS borough,
@@ -67,9 +67,9 @@ QUALIFY ROW_NUMBER() OVER(PARTITION BY date_of_interest ORDER BY date_of_interes
 
 
 --Staten Island
-CREATE OR REPLACE DYNAMIC TABLE statenIsland_covid_data
-    LAG='DOWNSTREAM'
-    WAREHOUSE='CHALLENGE_WH'
+CREATE OR REPLACE  TABLE statenIsland_covid_data
+    -- LAG='DOWNSTREAM'
+    -- WAREHOUSE='CHALLENGE_WH'
 AS
 SELECT
     'Staten Island' AS borough,

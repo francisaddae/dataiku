@@ -85,7 +85,6 @@ AS
     ORDER BY 1;
 
 -- Using a stored procedute to clean up table
-USE SCHEMA francisDB.PRESENT;
 
 CREATE OR REPLACE PROCEDURE clean_base_table()
     RETURNS TABLE(date_of_interest DATE, case_count NUMBER(10,2), probable_case_count NUMBER(10,2), hospitalized_count NUMBER(10,2), death_count NUMBER(10,2),
