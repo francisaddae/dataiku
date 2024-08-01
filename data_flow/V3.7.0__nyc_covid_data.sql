@@ -1,5 +1,9 @@
-USE DATABASE francisDB;
-USE SCHEMA present;
+-- This file will create the databse and schema and will specify which schema to use
+CREATE DATABASE IF NOT EXISTS francisDB;
+CREATE SCHEMA IF NOT EXISTS francisDB.present;
+
+USE SCHEMA francisDB.present;
+
 
 --Creating a final dynamic tables that encompases all the data
 CREATE OR REPLACE DYNAMIC TABLE all_nyc_covid_reports
